@@ -1,0 +1,285 @@
+.menuButton{
+  box-shadow: none !important;
+  border:none !important;
+  &:active{
+    color:whitesmoke !important;
+    background-color: transparent !important;
+  }
+}
+
+body {
+  /* footer settings */
+  margin: 0;  
+  min-height: 100vh;
+  display:flex; 
+  flex-direction:column; 
+  /* rest */
+  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Poppins', sans-serif;
+  color:black;
+  overflow-x: hidden;
+}
+
+a:hover, button:hover {
+  transform: scale(1.05);
+}
+
+.backgroundImage {
+  background-image: url("../images/olia-gozha-J4kK8b9Fgj8-unsplash.jpg");
+  background-size: 100% auto;
+}
+
+
+.aboutLink {  
+  width:45%;
+  height:30px;
+  background-color: #161616;
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cvLink {
+  width:95%;
+  height:50px;
+  background-color: #161616;
+  color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+
+}
+
+.ff-p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.ff-d
+{
+  font-family: 'Mr Dafoe', cursive;
+}
+
+.lsp {
+  letter-spacing: 2px;
+}
+
+.text-indent {
+  text-indent: 1rem;
+}
+
+
+
+.fs-image {
+  font-size: 3.5rem;
+}
+
+#home {
+  position:relative;
+  top:-10vh;
+  min-height: 80vh;
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+}
+// Img
+.myImg {
+  width: 100%;
+  transition: 0.6s;
+}
+
+.hiddenText {
+  opacity:0;
+  transition: 1s;
+}
+
+
+.indexTile:hover { 
+  img {
+    transform: scale(1.05);
+    filter: brightness(50%);
+    transition: 0.5s;
+  }  
+  h1, h2, h3, h4, h5, h6, p {    
+    opacity:1;    
+  }  
+}
+
+.pageTile:hover { 
+  img {
+    filter: brightness(50%);
+    transition: 0.5s;
+  }  
+  h1, h2, h3, h4, h5, h6, p {    
+    opacity:1;    
+  }  
+}
+
+//Animation photo show in
+.showInDelay {
+  animation: showMe;
+  animation-delay:1.5s;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  @keyframes showMe {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.showIn {
+  animation: showMe;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  @keyframes showMe {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// Slide div animation
+
+.slideInRight {
+  animation-name: slideRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(50vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+.slideInLeft {
+  animation-name: slideLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(-50vw);
+    }
+    100% {
+      transform: translateX(0);     
+    }
+  }
+}
+
+.slideInTop {
+  animation-name: slideTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  transition: 1;
+
+  @keyframes slideTop {
+    0% {
+      transform: translateY(-50vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.slideInBot {
+  animation-name: slideBot;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  transition: 1;
+
+  @keyframes slideBot {
+    0% {
+      transform: translateY(50vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+// // Intro
+.intro {
+  position: fixed;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  left:0;
+  top:0%;
+  width:100%;
+  height:100vh;
+  transition: 1s;
+  background-image: url(../images/emre-Wq2Y9F63ngM-unsplash.jpg);
+  background-size: cover;
+  background-color: #161616;
+}
+
+.logo {
+  border: whitesmoke solid 10px;
+  position:relative;
+  min-width: 30rem;
+  min-height: 30rem;
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  color: whitesmoke;
+  display: inline-block;
+  opacity: 0;
+  font-size: 17rem;
+  font-weight: bold;
+  font-style: italic;
+  transition: 0.7s; 
+  background-color: black;
+  border-radius: 100%;
+  padding:5rem;
+  text-align: center;
+
+
+  &.active {
+    opacity: 1;
+    transition: ease-in-out 0.5;
+  }
+  &.fade {
+    opacity: 0;
+    transition: ease-in-out 0.5;
+  }
+}
+
+.navbarLogoDiv {
+  display: flex;
+  align-items: center;
+}
+.navbarLogo {
+  border:#161616 solid 3px;
+  border-radius: 100%;
+  padding: 0.1rem;
+  min-width: 5rem;
+  min-height: 5rem;
+  font-size: 3rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
+  position: relative;
+  background-color: white;
+}
+
+
+

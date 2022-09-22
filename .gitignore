@@ -1,0 +1,6 @@
+venv
+__pycache__/
+static/images/
+static/files/
+database.sqlite
+
